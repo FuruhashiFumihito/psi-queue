@@ -14,6 +14,6 @@ if __name__ == '__main__':
 
     ax1.plot(steps, queue_length_history, color='blue', label="queue")
     # ax2.plot(steps, [x[0] for x in ports_state_history], color='red',  label="port1_state")
-    ax3.plot(steps, sales_history, color='yellow', label="sales")
+    # ax3.plot(steps, sales_history, color='yellow', label="sales")
 
     plt.show()
