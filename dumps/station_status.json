@@ -5,7 +5,7 @@
             "station_id": "00010882",
             "is_installed": true,
             "is_returning": true,
-            "last_reported": 1672987022,
+            "last_reported": 1672988343,
             "num_bikes_available": 0,
             "num_docks_available": 11
         }
@@ -16,7 +16,7 @@
             "station_id": "00010855",
             "is_installed": true,
             "is_returning": true,
-            "last_reported": 1672987022,
+            "last_reported": 1672988343,
             "num_bikes_available": 0,
             "num_docks_available": 5
         }
@@ -27,7 +27,7 @@
             "station_id": "00010976",
             "is_installed": true,
             "is_returning": false,
-            "last_reported": 1672987022,
+            "last_reported": 1672988343,
             "num_bikes_available": 4,
             "num_docks_available": 0
         }
@@ -38,7 +38,7 @@
             "station_id": "00010599",
             "is_installed": true,
             "is_returning": false,
-            "last_reported": 1672987022,
+            "last_reported": 1672988343,
             "num_bikes_available": 6,
             "num_docks_available": 0
         }

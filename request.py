@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import datetime
 # station: https://ckan.odpt.org/dataset/c_bikeshare_gbfs-d-bikeshare/resource/06ddbb21-be3d-4163-ac92-d90127e9bf90
 
 def get_station_info():
@@ -25,7 +26,7 @@ def get_staion_status():
       "00010976" : [],
       "00010599" : []
     }
-    while 1==1:
+    for i in range(100000):
         r = requests.get(url)
         station_status = r.json()['data']['stations']
         for station in station_status:
@@ -33,6 +34,7 @@ def get_staion_status():
                 outputs[station['station_id']].append(station)
         with open('dumps/station_status.json', 'w') as f:
             json.dump(outputs, f, indent=4)
+        print('[LOG]:DATE ADD:', datetime.datetime.now())
         time.sleep(180)
 
 if __name__ == '__main__':
