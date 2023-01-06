@@ -1,32 +1,32 @@
-            {
-                "lat": 35.711875,
-                "lon": 139.759306,
-                "name": "E5-25.\u30b8\u30a7\u30ce\u30f4\u30a3\u30a2\u6771\u5927\u524d\u30b0\u30ea\u30fc\u30f3\u30f4\u30a7\u30fc\u30eb",
-                "capacity": 11,
-                "region_id": "6",
-                "station_id": "00010882"
-            },
-            {
-                "lat": 35.712445,
-                "lon": 139.758157,
-                "name": "E5-24.\u672c\u90f76\u4e01\u76ee",
-                "capacity": 5,
-                "region_id": "6",
-                "station_id": "00010855"
-            },
-            {
-                "lat": 35.714875,
-                "lon": 139.76394,
-                "name": "E5-27.\u771f\u6b63\u9928\u99d0\u8eca\u5834",
-                "capacity": 4,
-                "region_id": "6",
-                "station_id": "00010976"
-            },
-            {
-                "lat": 35.715592,
-                "lon": 139.76192,
-                "name": "E5-13.\u5f25\u751f\u4e8c\u4e01\u76ee",
-                "capacity": 6,
-                "region_id": "6",
-                "station_id": "00010599"
-            },
+{
+    "lat": 35.711875,
+    "lon": 139.759306,
+    "name": "E5-25.\u30b8\u30a7\u30ce\u30f4\u30a3\u30a2\u6771\u5927\u524d\u30b0\u30ea\u30fc\u30f3\u30f4\u30a7\u30fc\u30eb",
+    "capacity": 11,
+    "region_id": "6",
+    "station_id": "00010882"
+},
+{
+    "lat": 35.712445,
+    "lon": 139.758157,
+    "name": "E5-24.\u672c\u90f76\u4e01\u76ee",
+    "capacity": 5,
+    "region_id": "6",
+    "station_id": "00010855"
+},
+{
+    "lat": 35.714875,
+    "lon": 139.76394,
+    "name": "E5-27.\u771f\u6b63\u9928\u99d0\u8eca\u5834",
+    "capacity": 4,
+    "region_id": "6",
+    "station_id": "00010976"
+},
+{
+    "lat": 35.715592,
+    "lon": 139.76192,
+    "name": "E5-13.\u5f25\u751f\u4e8c\u4e01\u76ee",
+    "capacity": 6,
+    "region_id": "6",
+    "station_id": "00010599"
+},

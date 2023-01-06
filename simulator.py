@@ -3,13 +3,20 @@ from user import User
 
 class Simulate():
     def simulate(self, step_num):
-        ports_setting_list = [ # supply_prob, capacity
-          (0.6, 10),
-          (0.2, 2),
-          (0.2, 2)
+        random.seed(314)
+        ports_setting_list = [
+        # supply_prob, capacity
+          [0.8, 11],
+          [0.1, 6],
+          [0.5, 5],
+          [0.1, 4]
         ]
-        ports_now_device_num_list = [3,1,1]
-        user_queue = [tuple(random.sample([1,2,3], 2))]
+        ports_now_device_num_list = [0,6,0,4]
+        user_queue = [
+            tuple(
+                random.sample([1,2,3,4],
+                random.sample([1,2,3,4],1)[0]
+                 ))]
         sales = 0
         queue_length_history = []
         ports_state_history = []
@@ -23,7 +30,7 @@ class Simulate():
             print('QUEUE LENGTH: ', len(user_queue))
             print('PORTS NOW... ', ports_now_device_num_list)
 
-            prob_user_generate = 1 / (len(user_queue) + 1)
+            prob_user_generate = 0.4
 
             print()
             print('GENERATING USER...')
@@ -39,24 +46,24 @@ class Simulate():
             print('GENERATING RIDE...')
             # ride
             if len(user_queue) > 0:
-                user_pref_vec = user_queue[0]
-                waiting_counter += 1
-                for user_pref in user_pref_vec:
-                    if 1 <= ports_now_device_num_list[user_pref-1]:
-                        print('RIDE DONE!! PORT No.', user_pref)
-                        ports_now_device_num_list[user_pref-1] -= 1
-                        user_queue.pop()
-                        sales += 100
+                for user_pref_vec in user_queue:
+                    waiting_counter += 1
+                    for user_pref in user_pref_vec:
+                        if 1 <= ports_now_device_num_list[user_pref-1]:
+                            print('RIDE DONE!! PORT No.', user_pref)
+                            ports_now_device_num_list[user_pref-1] -= 1
+                            user_queue.pop(user_queue.index(user_pref_vec))
+                            sales += 100
+                            waiting_counter = 0
+                            break
+                        else:
+                            sales -= 50
+                            print('NO BIKE')
+                    if  waiting_counter >= 5:
+                        print('USER CANNOT WAIT MORE!!')
                         waiting_counter = 0
-                        break
-                    else:
-                        sales -= 50
-                        print('NO BIKE')
-                if  waiting_counter >= 5:
-                    print('USER CANNOT WAIT MORE!!')
-                    waiting_counter = 0
-                    sales -= 100
-                    user_queue.pop()
+                        sales -= 100
+                        user_queue.pop()
 
             else:
                 print('NO USER WAIR NOW')
@@ -84,7 +91,7 @@ class Simulate():
             print('TOTAL SALES NOW...: ', sales)
 
             queue_length_history.append(len(user_queue))
-            ports_state_history.append(ports_now_device_num_list)
+            ports_state_history.append([x for x in ports_now_device_num_list])
             sales_history.append(sales)
             print('========================')
         return queue_length_history, ports_state_history, sales_history
