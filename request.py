@@ -32,7 +32,7 @@ def get_staion_status():
         for station in station_status:
             if station['station_id'] in target_id:
                 outputs[station['station_id']].append(station)
-        with open('dumps/station_status-2.json', 'w') as f:
+        with open('dumps/station_status-3.json', 'w') as f:
             json.dump(outputs, f, indent=4)
         print('[LOG]:DATE ADD:', datetime.datetime.now())
         time.sleep(180)

@@ -3,7 +3,7 @@ from simulator import Simulate
 import matplotlib.pyplot as plt
 
 if __name__ == '__main__':
-    step_num = 100
+    step_num = 1000
     queue_length_history, ports_state_history, sales_history = Simulate().simulate(step_num)
     steps = range(step_num)
 
